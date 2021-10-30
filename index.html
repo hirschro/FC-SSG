@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <title>Sales Sheet Generator</title>
 <style>
 body {
   text-align: left;
   max-width: 20em;
   margin: auto;
+  font-family: 'Roboto', sans-serif;
   /* border: 1px solid black; */
   
 }
@@ -23,6 +27,13 @@ div {
   margin: 0 0 0 5em;
   font-weight: bold;
 }
+#btn {
+  display: block;
+  font-size: 1.2em;
+  width: 100px;
+  height: 30px;
+  margin: 1.5em 0 0 0;
+}
 </style>
 </head>
 
@@ -34,8 +45,8 @@ div {
   <label for="sku">SKU</label><br>
   <input type="text" id="sku" name="sku" placeholder="Enter sku"/><br>
 
-  <label for="salePercent">Sale Amount (%)</label><br>
-  <input type="number" id="salePercent" name="salePercent" placeholder="Enter sale %"/><br>
+  <label for="salePercent">Sale % Amount</label><br>
+  <input type="number" id="salePercent" name="salePercent" placeholder="Enter %"/><br>
 
   <div>OR</div>
 
@@ -47,6 +58,19 @@ div {
 
   <label for="endDate">Sale End Date</label><br>
   <input type="date" id="endDate" name="endDate" placeholder="End date"/><br>
+
+  <button type="submit" id="btn">Submit</button>
+  <button type="reset" id="btn">Reset</button><br><br>
+
+  <div class="instructions">Instructions:</div>
+
+  <div>Entering sales discount % vs. price: (explanation)</div>
+  <div>SKU: Enter.....</div>
+  <div>Sale % Amount: Enter...</div>
+  <div>Flat Rate: Enter...</div>
+  <div>Start Date: ......</div>
+  <div>End Date:......</div>
+  <div></div>
 </form>
 
 
