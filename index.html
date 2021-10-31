@@ -11,29 +11,44 @@
 <style>
 body {
   text-align: left;
-  max-width: 20em;
+  max-width: 40em;
   margin: auto;
   font-family: 'Roboto', sans-serif;
-  /* border: 1px solid black; */
-  
+}
+/* .container {
+    border: 1px solid black;
+} */
+h1 {
+  text-align: center;
+  margin: 1em 1em;
 }
 input {
   display: block;
 }
 input, label, div {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
-div {
-  margin: 0 0 0 5em;
-  font-weight: bold;
+input, label {
+  margin-left: 50px;
+}
+.btn-container {
+  display: flex;
 }
 #btn {
   display: block;
-  font-size: 1.2em;
+  font-size: .8em;
   width: 100px;
   height: 30px;
-  margin: 1.5em 0 0 0;
+  margin: 25px 0 25px 50px;
 }
+.instrcts-container {
+  margin: 0 0 4em 50px;
+ }
+.instrcts {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
 </style>
 </head>
 
@@ -41,37 +56,42 @@ div {
 <h1>Sales Sheet Generator</h1>
 
 
-<form>
-  <label for="sku">SKU</label><br>
-  <input type="text" id="sku" name="sku" placeholder="Enter sku"/><br>
+  <form>
+    <div class="container">
+      <label for="sku" style="padding-top: 1em">SKU</label><br>
+      <input type="text" id="sku" name="sku" placeholder="Enter sku"/><br>
 
-  <label for="salePercent">Sale % Amount</label><br>
-  <input type="number" id="salePercent" name="salePercent" placeholder="Enter %"/><br>
+      <label for="salePercent">Sale %</label><br>
+      <input type="number" id="salePercent" name="salePercent" placeholder="Enter % amount"/><br>
 
-  <div>OR</div>
+      <div style="margin-left: 175px">OR</div>
 
-  <label for="flatRate">Flat Rate</label><br>
-  <input type="number" id="flatRate" name="flatRate" placeholder="Enter price"/><br>
+      <label for="flatRate">Flat Rate</label><br>
+      <input type="number" id="flatRate" name="flatRate" placeholder="Enter price"/><br>
 
-  <label for="startDate">Sale Start Date</label><br>
-  <input type="date" id="startDate" name="startDate" placeholder="Enter date"/><br>
+      <label for="startDate">Sale Start Date</label><br>
+      <input type="date" id="startDate" name="startDate" placeholder="Enter date"/><br>
 
-  <label for="endDate">Sale End Date</label><br>
-  <input type="date" id="endDate" name="endDate" placeholder="End date"/><br>
+      <label for="endDate">Sale End Date</label><br>
+      <input type="date" id="endDate" name="endDate" placeholder="End date"/><br>
+      
+      <div class="btn-container">
+        <button type="submit" id="btn">Submit</button>
+        <button type="reset" id="btn">Reset</button><br>
+      </div>
+    </div>
+    <div class="instrcts-container" id="in-ctnr">INSTRUCTIONS:<br>
 
-  <button type="submit" id="btn">Submit</button>
-  <button type="reset" id="btn">Reset</button><br><br>
-
-  <div class="instructions">Instructions:</div>
-
-  <div>Entering sales discount % vs. price: (explanation)</div>
-  <div>SKU: Enter.....</div>
-  <div>Sale % Amount: Enter...</div>
-  <div>Flat Rate: Enter...</div>
-  <div>Start Date: ......</div>
-  <div>End Date:......</div>
-  <div></div>
-</form>
+    <div class="instrcts">Entering sales discount % vs. price: (explanation)</div>
+    <div class="instrcts">SKU: Enter.....</div>
+    <div class="instrcts">Sale % Amount: Enter...</div>
+    <div class="instrcts">Flat Rate: Enter...</div>
+    <div class="instrcts">Start Date: ......</div>
+    <div class="instrcts">End Date:......</div>
+    <div class="instrcts"></div>
+  
+  </div>
+  </form>
 
 
   
